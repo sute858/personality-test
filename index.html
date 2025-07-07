@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>性格診断テスト（サンプル）</title>
+  <style>
+    body { font-family: sans-serif; padding: 20px; }
+    h1 { font-size: 1.5em; margin-bottom: 10px; }
+    .question { margin-bottom: 20px; }
+    .question p { font-weight: bold; }
+    .options label { display: block; margin-left: 20px; }
+    #result { margin-top: 30px; font-size: 1.2em; font-weight: bold; }
+    button { padding: 10px 20px; font-size: 1em; }
+  </style>
+</head>
+<body>
+  <h1>性格診断テスト（サンプル5問）</h1>
+  <form id="quizForm">
+    <div class="question">
+      <p>1. 同じ景色を毎日見るとき、あなたは？</p>
+      <div class="options">
+        <label><input type="radio" name="q1" value="A" /> A. 変化を探してしまう</label>
+        <label><input type="radio" name="q1" value="B" /> B. 安心する</label>
+        <label><input type="radio" name="q1" value="C" /> C. 飽きる</label>
+        <label><input type="radio" name="q1" value="D" /> D. 見慣れた中に別の意味を感じる</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <p>2. SNSの使い方に近いのは？</p>
+      <div class="options">
+        <label><input type="radio" name="q2" value="A" /> A. 楽しさ重視、共感がほしい</label>
+        <label><input type="radio" name="q2" value="B" /> B. 情報収集や記録が中心</label>
+        <label><input type="radio" name="q2" value="C" /> C. 自己表現、発信ツール</label>
+        <label><input type="radio" name="q2" value="D" /> D. 見る専門、投稿はまれ</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <p>3. 正しいけれど冷たい言葉 vs 優しいけど間違ってる言葉、どっち？</p>
+      <div class="options">
+        <label><input type="radio" name="q3" value="A" /> A. 正しい言葉</label>
+        <label><input type="radio" name="q3" value="B" /> B. 状況による</label>
+        <label><input type="radio" name="q3" value="C" /> C. 優しい言葉</label>
+        <label><input type="radio" name="q3" value="D" /> D. どちらも違和感がある</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <p>4. あなたの中に「複数の自分」がいると感じる？</p>
+      <div class="options">
+        <label><input type="radio" name="q4" value="A" /> A. よくある。役割で人格も変わる</label>
+        <label><input type="radio" name="q4" value="B" /> B. 稀にあるが混乱はしない</label>
+        <label><input type="radio" name="q4" value="C" /> C. 常に一貫した自分がいる</label>
+        <label><input type="radio" name="q4" value="D" /> D. “本当の自分”がわからない</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <p>5. 過去の失敗をどう扱う？</p>
+      <div class="options">
+        <label><input type="radio" name="q5" value="A" /> A. ネタにする</label>
+        <label><input type="radio" name="q5" value="B" /> B. 冷静に振り返る</label>
+        <label><input type="radio" name="q5" value="C" /> C. 教訓化する</label>
+        <label><input type="radio" name="q5" value="D" /> D. 忘れる努力をする</label>
+      </div>
+    </div>
+
+    <button type="button" onclick="calculateResult()">診断する</button>
+  </form>
+
+  <div id="result"></div>
+
+  <script>
+    function calculateResult() {
+      const form = document.getElementById('quizForm');
+      const answers = ['q1', 'q2', 'q3', 'q4', 'q5'].map(q => {
+        const selected = form.elements[q].value;
+        return selected;
+      });
+
+      const count = { A: 0, B: 0, C: 0, D: 0 };
+      answers.forEach(ans => { if (ans) count[ans]++; });
+
+      let resultText = '';
+      const max = Math.max(...Object.values(count));
+      const dominant = Object.keys(count).find(key => count[key] === max);
+
+      switch (dominant) {
+        case 'A':
+          resultText = 'あなたは「観察と発見の人」。小さな変化にも気づき、周囲をよく見ています。';
+          break;
+        case 'B':
+          resultText = 'あなたは「思考と安定の人」。秩序や冷静さを大事にし、慎重な判断を好みます。';
+          break;
+        case 'C':
+          resultText = 'あなたは「挑戦と創造の人」。失敗も自分の糧にして、次の行動に生かします。';
+          break;
+        case 'D':
+          resultText = 'あなたは「内省と複雑さの人」。自分の中に広がる宇宙を探っている途中かもしれません。';
+          break;
+      }
+
+      document.getElementById('result').innerText = resultText;
+    }
+  </script>
+</body>
+</html>
