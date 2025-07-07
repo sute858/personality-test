@@ -3,105 +3,249 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>性格診断テスト（サンプル）</title>
+  <title>性格診断テスト（フルバージョン）</title>
   <style>
-    body { font-family: sans-serif; padding: 20px; }
+    body { font-family: sans-serif; padding: 20px; max-width: 800px; margin: auto; }
     h1 { font-size: 1.5em; margin-bottom: 10px; }
     .question { margin-bottom: 20px; }
     .question p { font-weight: bold; }
     .options label { display: block; margin-left: 20px; }
     #result { margin-top: 30px; font-size: 1.2em; font-weight: bold; }
-    button { padding: 10px 20px; font-size: 1em; }
+    button { padding: 10px 20px; font-size: 1em; margin-top: 20px; }
   </style>
 </head>
 <body>
-  <h1>性格診断テスト（サンプル5問）</h1>
+  <h1>性格診断テスト（フルバージョン20問）</h1>
   <form id="quizForm">
-    <div class="question">
-      <p>1. 同じ景色を毎日見るとき、あなたは？</p>
-      <div class="options">
-        <label><input type="radio" name="q1" value="A" /> A. 変化を探してしまう</label>
-        <label><input type="radio" name="q1" value="B" /> B. 安心する</label>
-        <label><input type="radio" name="q1" value="C" /> C. 飽きる</label>
-        <label><input type="radio" name="q1" value="D" /> D. 見慣れた中に別の意味を感じる</label>
-      </div>
-    </div>
 
     <div class="question">
-      <p>2. SNSの使い方に近いのは？</p>
+      <p>1. 質問サンプル 1（内容は仮です）</p>
       <div class="options">
-        <label><input type="radio" name="q2" value="A" /> A. 楽しさ重視、共感がほしい</label>
-        <label><input type="radio" name="q2" value="B" /> B. 情報収集や記録が中心</label>
-        <label><input type="radio" name="q2" value="C" /> C. 自己表現、発信ツール</label>
-        <label><input type="radio" name="q2" value="D" /> D. 見る専門、投稿はまれ</label>
+        <label><input type="radio" name="q1" value="A" /> A. 回答A</label>
+        <label><input type="radio" name="q1" value="B" /> B. 回答B</label>
+        <label><input type="radio" name="q1" value="C" /> C. 回答C</label>
+        <label><input type="radio" name="q1" value="D" /> D. 回答D</label>
       </div>
     </div>
-
+    
     <div class="question">
-      <p>3. 正しいけれど冷たい言葉 vs 優しいけど間違ってる言葉、どっち？</p>
+      <p>2. 質問サンプル 2（内容は仮です）</p>
       <div class="options">
-        <label><input type="radio" name="q3" value="A" /> A. 正しい言葉</label>
-        <label><input type="radio" name="q3" value="B" /> B. 状況による</label>
-        <label><input type="radio" name="q3" value="C" /> C. 優しい言葉</label>
-        <label><input type="radio" name="q3" value="D" /> D. どちらも違和感がある</label>
+        <label><input type="radio" name="q2" value="A" /> A. 回答A</label>
+        <label><input type="radio" name="q2" value="B" /> B. 回答B</label>
+        <label><input type="radio" name="q2" value="C" /> C. 回答C</label>
+        <label><input type="radio" name="q2" value="D" /> D. 回答D</label>
       </div>
     </div>
-
+    
     <div class="question">
-      <p>4. あなたの中に「複数の自分」がいると感じる？</p>
+      <p>3. 質問サンプル 3（内容は仮です）</p>
       <div class="options">
-        <label><input type="radio" name="q4" value="A" /> A. よくある。役割で人格も変わる</label>
-        <label><input type="radio" name="q4" value="B" /> B. 稀にあるが混乱はしない</label>
-        <label><input type="radio" name="q4" value="C" /> C. 常に一貫した自分がいる</label>
-        <label><input type="radio" name="q4" value="D" /> D. “本当の自分”がわからない</label>
+        <label><input type="radio" name="q3" value="A" /> A. 回答A</label>
+        <label><input type="radio" name="q3" value="B" /> B. 回答B</label>
+        <label><input type="radio" name="q3" value="C" /> C. 回答C</label>
+        <label><input type="radio" name="q3" value="D" /> D. 回答D</label>
       </div>
     </div>
-
+    
     <div class="question">
-      <p>5. 過去の失敗をどう扱う？</p>
+      <p>4. 質問サンプル 4（内容は仮です）</p>
       <div class="options">
-        <label><input type="radio" name="q5" value="A" /> A. ネタにする</label>
-        <label><input type="radio" name="q5" value="B" /> B. 冷静に振り返る</label>
-        <label><input type="radio" name="q5" value="C" /> C. 教訓化する</label>
-        <label><input type="radio" name="q5" value="D" /> D. 忘れる努力をする</label>
+        <label><input type="radio" name="q4" value="A" /> A. 回答A</label>
+        <label><input type="radio" name="q4" value="B" /> B. 回答B</label>
+        <label><input type="radio" name="q4" value="C" /> C. 回答C</label>
+        <label><input type="radio" name="q4" value="D" /> D. 回答D</label>
       </div>
     </div>
-
+    
+    <div class="question">
+      <p>5. 質問サンプル 5（内容は仮です）</p>
+      <div class="options">
+        <label><input type="radio" name="q5" value="A" /> A. 回答A</label>
+        <label><input type="radio" name="q5" value="B" /> B. 回答B</label>
+        <label><input type="radio" name="q5" value="C" /> C. 回答C</label>
+        <label><input type="radio" name="q5" value="D" /> D. 回答D</label>
+      </div>
+    </div>
+    
+    <div class="question">
+      <p>6. 質問サンプル 6（内容は仮です）</p>
+      <div class="options">
+        <label><input type="radio" name="q6" value="A" /> A. 回答A</label>
+        <label><input type="radio" name="q6" value="B" /> B. 回答B</label>
+        <label><input type="radio" name="q6" value="C" /> C. 回答C</label>
+        <label><input type="radio" name="q6" value="D" /> D. 回答D</label>
+      </div>
+    </div>
+    
+    <div class="question">
+      <p>7. 質問サンプル 7（内容は仮です）</p>
+      <div class="options">
+        <label><input type="radio" name="q7" value="A" /> A. 回答A</label>
+        <label><input type="radio" name="q7" value="B" /> B. 回答B</label>
+        <label><input type="radio" name="q7" value="C" /> C. 回答C</label>
+        <label><input type="radio" name="q7" value="D" /> D. 回答D</label>
+      </div>
+    </div>
+    
+    <div class="question">
+      <p>8. 質問サンプル 8（内容は仮です）</p>
+      <div class="options">
+        <label><input type="radio" name="q8" value="A" /> A. 回答A</label>
+        <label><input type="radio" name="q8" value="B" /> B. 回答B</label>
+        <label><input type="radio" name="q8" value="C" /> C. 回答C</label>
+        <label><input type="radio" name="q8" value="D" /> D. 回答D</label>
+      </div>
+    </div>
+    
+    <div class="question">
+      <p>9. 質問サンプル 9（内容は仮です）</p>
+      <div class="options">
+        <label><input type="radio" name="q9" value="A" /> A. 回答A</label>
+        <label><input type="radio" name="q9" value="B" /> B. 回答B</label>
+        <label><input type="radio" name="q9" value="C" /> C. 回答C</label>
+        <label><input type="radio" name="q9" value="D" /> D. 回答D</label>
+      </div>
+    </div>
+    
+    <div class="question">
+      <p>10. 質問サンプル 10（内容は仮です）</p>
+      <div class="options">
+        <label><input type="radio" name="q10" value="A" /> A. 回答A</label>
+        <label><input type="radio" name="q10" value="B" /> B. 回答B</label>
+        <label><input type="radio" name="q10" value="C" /> C. 回答C</label>
+        <label><input type="radio" name="q10" value="D" /> D. 回答D</label>
+      </div>
+    </div>
+    
+    <div class="question">
+      <p>11. 質問サンプル 11（内容は仮です）</p>
+      <div class="options">
+        <label><input type="radio" name="q11" value="A" /> A. 回答A</label>
+        <label><input type="radio" name="q11" value="B" /> B. 回答B</label>
+        <label><input type="radio" name="q11" value="C" /> C. 回答C</label>
+        <label><input type="radio" name="q11" value="D" /> D. 回答D</label>
+      </div>
+    </div>
+    
+    <div class="question">
+      <p>12. 質問サンプル 12（内容は仮です）</p>
+      <div class="options">
+        <label><input type="radio" name="q12" value="A" /> A. 回答A</label>
+        <label><input type="radio" name="q12" value="B" /> B. 回答B</label>
+        <label><input type="radio" name="q12" value="C" /> C. 回答C</label>
+        <label><input type="radio" name="q12" value="D" /> D. 回答D</label>
+      </div>
+    </div>
+    
+    <div class="question">
+      <p>13. 質問サンプル 13（内容は仮です）</p>
+      <div class="options">
+        <label><input type="radio" name="q13" value="A" /> A. 回答A</label>
+        <label><input type="radio" name="q13" value="B" /> B. 回答B</label>
+        <label><input type="radio" name="q13" value="C" /> C. 回答C</label>
+        <label><input type="radio" name="q13" value="D" /> D. 回答D</label>
+      </div>
+    </div>
+    
+    <div class="question">
+      <p>14. 質問サンプル 14（内容は仮です）</p>
+      <div class="options">
+        <label><input type="radio" name="q14" value="A" /> A. 回答A</label>
+        <label><input type="radio" name="q14" value="B" /> B. 回答B</label>
+        <label><input type="radio" name="q14" value="C" /> C. 回答C</label>
+        <label><input type="radio" name="q14" value="D" /> D. 回答D</label>
+      </div>
+    </div>
+    
+    <div class="question">
+      <p>15. 質問サンプル 15（内容は仮です）</p>
+      <div class="options">
+        <label><input type="radio" name="q15" value="A" /> A. 回答A</label>
+        <label><input type="radio" name="q15" value="B" /> B. 回答B</label>
+        <label><input type="radio" name="q15" value="C" /> C. 回答C</label>
+        <label><input type="radio" name="q15" value="D" /> D. 回答D</label>
+      </div>
+    </div>
+    
+    <div class="question">
+      <p>16. 質問サンプル 16（内容は仮です）</p>
+      <div class="options">
+        <label><input type="radio" name="q16" value="A" /> A. 回答A</label>
+        <label><input type="radio" name="q16" value="B" /> B. 回答B</label>
+        <label><input type="radio" name="q16" value="C" /> C. 回答C</label>
+        <label><input type="radio" name="q16" value="D" /> D. 回答D</label>
+      </div>
+    </div>
+    
+    <div class="question">
+      <p>17. 質問サンプル 17（内容は仮です）</p>
+      <div class="options">
+        <label><input type="radio" name="q17" value="A" /> A. 回答A</label>
+        <label><input type="radio" name="q17" value="B" /> B. 回答B</label>
+        <label><input type="radio" name="q17" value="C" /> C. 回答C</label>
+        <label><input type="radio" name="q17" value="D" /> D. 回答D</label>
+      </div>
+    </div>
+    
+    <div class="question">
+      <p>18. 質問サンプル 18（内容は仮です）</p>
+      <div class="options">
+        <label><input type="radio" name="q18" value="A" /> A. 回答A</label>
+        <label><input type="radio" name="q18" value="B" /> B. 回答B</label>
+        <label><input type="radio" name="q18" value="C" /> C. 回答C</label>
+        <label><input type="radio" name="q18" value="D" /> D. 回答D</label>
+      </div>
+    </div>
+    
+    <div class="question">
+      <p>19. 質問サンプル 19（内容は仮です）</p>
+      <div class="options">
+        <label><input type="radio" name="q19" value="A" /> A. 回答A</label>
+        <label><input type="radio" name="q19" value="B" /> B. 回答B</label>
+        <label><input type="radio" name="q19" value="C" /> C. 回答C</label>
+        <label><input type="radio" name="q19" value="D" /> D. 回答D</label>
+      </div>
+    </div>
+    
+    <div class="question">
+      <p>20. 質問サンプル 20（内容は仮です）</p>
+      <div class="options">
+        <label><input type="radio" name="q20" value="A" /> A. 回答A</label>
+        <label><input type="radio" name="q20" value="B" /> B. 回答B</label>
+        <label><input type="radio" name="q20" value="C" /> C. 回答C</label>
+        <label><input type="radio" name="q20" value="D" /> D. 回答D</label>
+      </div>
+    </div>
+    
     <button type="button" onclick="calculateResult()">診断する</button>
   </form>
-
   <div id="result"></div>
-
   <script>
     function calculateResult() {
       const form = document.getElementById('quizForm');
-      const answers = ['q1', 'q2', 'q3', 'q4', 'q5'].map(q => {
-        const selected = form.elements[q].value;
-        return selected;
-      });
-
       const count = { A: 0, B: 0, C: 0, D: 0 };
-      answers.forEach(ans => { if (ans) count[ans]++; });
-
-      let resultText = '';
+      for (let i = 1; i <= 20; i++) {
+        const answer = form.elements['q' + i].value;
+        if (answer) count[answer]++;
+      }
       const max = Math.max(...Object.values(count));
       const dominant = Object.keys(count).find(key => count[key] === max);
-
+      let resultText = '';
       switch (dominant) {
         case 'A':
-          resultText = 'あなたは「観察と発見の人」。小さな変化にも気づき、周囲をよく見ています。';
+          resultText = 'あなたは「観察型」。人の変化や空気の流れを敏感に察知します。';
           break;
         case 'B':
-          resultText = 'あなたは「思考と安定の人」。秩序や冷静さを大事にし、慎重な判断を好みます。';
+          resultText = 'あなたは「論理型」。一歩引いて物事を整理するタイプです。';
           break;
         case 'C':
-          resultText = 'あなたは「挑戦と創造の人」。失敗も自分の糧にして、次の行動に生かします。';
+          resultText = 'あなたは「直感型」。考える前に動き、結果を自分で納得する派。';
           break;
         case 'D':
-          resultText = 'あなたは「内省と複雑さの人」。自分の中に広がる宇宙を探っている途中かもしれません。';
+          resultText = 'あなたは「内省型」。自分の内側を深く掘り下げる力があります。';
           break;
       }
-
       document.getElementById('result').innerText = resultText;
     }
   </script>
